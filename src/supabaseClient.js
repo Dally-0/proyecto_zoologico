@@ -1,6 +1,12 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://vptbdopfaauilhuozyku.supabase.co'
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZwdGJkb3BmYWF1aWxodW96eWt1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg2NTU1ODQsImV4cCI6MjA3NDIzMTU4NH0.asjonn4JYC1fDJmQjuNgA7hhfcGHwXiAODjD1KLZdwA'
+// Accede a las variables desde process.env
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY
+
+// Asegúrate de que las claves existan antes de crear el cliente
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Las claves de entorno de Supabase no están definidas.')
+}
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
