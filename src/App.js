@@ -18,6 +18,7 @@ import ProfilesManagement from './pages/Dashboard/ProfilesManagement';   // 👈
 import TicketsView from './pages/Dashboard/TicketsView';                 // 👈 FIX: Estaba faltando
 import VolunteersManagement from './pages/Dashboard/VolunteersManagement';
 import Animals from './pages/Animals/Animals';
+import Contact from './pages/Contact/Contact';
 //import Contact from './pages/Contact/Contact';
 //import FAQ from './pages/FAQ/FAQ';
 //import NotFound from './pages/NotFound/NotFound';
@@ -33,24 +34,25 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Tickets" element={<Tickets/>} />
-            <Route path="/Volunteers" element={<Volunteers/>} />
-            <Route path="/Animals" element={<Animals/>} />
-            
-            
-            <Route path="/dashboard" element={<Dashboard />}>
               
-              {/* index: Es el componente que se carga por defecto en /dashboard */}
-              <Route index element={<DashboardWelcome />} />
-              <Route path="Animales" element={<AnimalsManagement />} />
-              <Route path="contactos" element={<ContactosManagement />} />
-              <Route path="faqs" element={<FaqsManagement />} />
-              <Route path="profiles" element={<ProfilesManagement />} />
-              <Route path="tickets" element={<TicketsView />} />
-              <Route path="voluntarios" element={<VolunteersManagement />} />
-            </Route>
+              <Route path="/" element={<Home />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Tickets" element={<Tickets/>} />
+              <Route path="/Volunteers" element={<Volunteers/>} />
+              <Route path="/Animals" element={<Animals/>} />
+              <Route path="/Contact" element={<Contact/>} />
+              
+              <Route path="/dashboard" element={<Dashboard />}>
+                
+                {/* index: Es el componente que se carga por defecto en /dashboard */}
+                <Route index element={<DashboardWelcome />} />
+                <Route path="Animales" element={<AnimalsManagement />} />
+                <Route path="contactos" element={<ContactosManagement />} />
+                <Route path="faqs" element={<FaqsManagement />} />
+                <Route path="profiles" element={<ProfilesManagement />} />
+                <Route path="tickets" element={<TicketsView />} />
+                <Route path="voluntarios" element={<VolunteersManagement />} />
+              </Route>
             
           </Routes>
         </main>

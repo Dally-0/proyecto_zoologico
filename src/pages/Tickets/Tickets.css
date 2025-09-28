@@ -1,0 +1,179 @@
+/* ==============================
+   ESTILOS GENERALES Y LAYOUT
+============================== */
+
+.tickets-page-container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
+}
+
+/* ==============================
+   FORMULARIO
+============================== */
+
+.tickets-form-card {
+  background: linear-gradient(135deg, #ffffff, #f9fafc);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 40px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tickets-form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  color: #007bff;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ticket-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.form-input {
+  padding: 12px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  outline: none;
+}
+
+.price-display .form-input {
+  background-color: #f5f6f8;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Botón */
+.submit-button {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   LISTA DE TICKETS
+============================== */
+
+.my-tickets-section {
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 1.6em;
+  color: #222;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.tickets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ticket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfdfd;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.ticket-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-info {
+  font-size: 1em;
+  color: #444;
+}
+
+.ticket-price {
+  font-weight: 700;
+  color: #007bff;
+  font-size: 1.1em;
+}
+
+.no-tickets {
+  text-align: center;
+  color: #888;
+  padding: 25px;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-style: italic;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .ticket-form {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

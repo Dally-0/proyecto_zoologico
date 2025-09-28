@@ -55,22 +55,25 @@ export default function Tickets() {
 
   return (
     <div>
-      <h2>Mis Tickets</h2>
-
-      <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+      <h1>Mis Tickets</h1>
+<br></br>
+      <form className='ticketCuadro' onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+        <h3>Fecha de ingreso: </h3>
         <input
           type="date"
           value={form.date}
           onChange={e => setForm({ ...form, date: e.target.value })}
           required
         />
-
+        <h3>Tipo de entrada: </h3>
+        <br></br>
         <select value={form.type} onChange={handleTypeChange} required>
           <option value="">Selecciona tipo</option>
           <option value="Normal">Normal</option>
           <option value="VIP">VIP</option>
         </select>
-        <label>cantidad</label>
+        <br></br>
+        <h3>Cantidad: </h3>
         <input
           type="number"
           min="1"
@@ -79,6 +82,7 @@ export default function Tickets() {
           onChange={handleQuantityChange}
           required
         />
+        <h3>Precio resultante: </h3>
 
         <input
           type="number"
@@ -90,13 +94,28 @@ export default function Tickets() {
         <button type="submit">Crear Ticket</button>
       </form>
 
-      <ul>
-        {tickets.map(t => (
-          <li key={t.id}>
-            📅 {t.date} — 🎟 {t.type} × {t.quantity} — 💲{t.price}
-          </li>
-        ))}
-      </ul>
+      <div className="ticket-history">
+  {tickets.map(t => (
+    <div key={t.id} className="ticket-card">
+      <div className="ticket-item ticket-date">
+        <span className="icon">📅</span>
+        <span className="label">Fecha</span>
+        <span className="value">{t.date}</span>
+      </div>
+      <div className="ticket-item ticket-details">
+        <span className="icon">🎟</span>
+        <span className="label">Tipo y Cantidad</span>
+        <span className="value">{t.type} × {t.quantity}</span>
+      </div>
+      <div className="ticket-item ticket-price">
+        <span className="icon">💲</span>
+        <span className="label">Precio Total</span>
+        <span className="value final-price">{t.price}</span>
+      </div>
     </div>
+  ))}
+</div>
+    </div>
+    
   )
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 // Importar imágenes (asegúrate de tener estas imágenes en assets/images/)
-import heroImage from '../../assets/images/hero-zoo.jpg';
+import heroImage from '../../assets/images/logo2.png';
 import lionImage from '../../assets/images/lion.jpg';
 import elephantImage from '../../assets/images/elephant.jpg';
 import pandaImage from '../../assets/images/panda.jpg';
@@ -42,7 +42,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1>Bienvenido al Zoológico Naturalia</h1>
+          <h1>Bienvenido al Zoológico Dally</h1>
           <p>Descubre la magia de la vida salvaje en un entorno seguro y educativo</p>
           <div className="hero-buttons">
             <Link to="/tickets" className="btn btn-primary">Comprar Entradas</Link>
@@ -54,20 +54,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="stats-section">
-        <div className="container">
-          <div className="stats-grid">
-            {zooInfo.map((item, index) => (
-              <div key={index} className="stat-item">
-                <span className="stat-icon">{item.icon}</span>
-                <h3>{item.number}</h3>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Featured Animals */}
       <section className="animals-section">
@@ -88,14 +75,18 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>¿Te gustaría ser parte de nuestra familia?</h2>
-          <p>Únete a nuestro programa de voluntarios y ayuda a conservar la vida salvaje</p>
-          <Link to="/volunteers" className="btn btn-primary">Ser Voluntario</Link>
-        </div>
-      </section>
+{/* Call to Action Rediseñado: Haz la Diferencia */}
+<section className="cta-section">
+  <div className="container2">
+    <h2>¡Salva Vidas Salvajes! Tu Ayuda es Crucial.</h2>
+    <p>Únete a nuestro equipo de **Voluntarios Apasionados** y trabaja en la primera línea de la conservación. Cada hora cuenta.</p>
+    <div className="cta-buttons">
+      <Link to="/volunteers" className="btn btn-primary">Quiero Ser Voluntario</Link>
+      {/* Opcional: Podrías añadir un segundo botón para donaciones, si aplica */}
+      {/* <Link to="/donate" className="btn btn-secondary">Explorar Opciones de Donación</Link> */}
+    </div>
+  </div>
+</section>
 
       {/* Quick Links */}
       <section className="links-section">

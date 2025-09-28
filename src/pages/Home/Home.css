@@ -1,13 +1,14 @@
 .home {
-  min-height: 100vh;
+  min-height: 0vh;
 }
 
-/* Hero Section */
 .hero-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  min-height: 80vh;
+  /* CAMBIO CLAVE: Eliminar o reducir min-height para que no empuje el contenido hacia abajo. */
+  /* Si quieres que ocupe casi toda la pantalla (como parece ser tu intención), usa calc() */
+  min-height: calc(100vh - var(--navbar-height)); /* Ocupa la altura visible menos la Navbar */
   padding: 2rem;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
@@ -109,9 +110,9 @@
 
 /* CTA Section */
 .cta-section {
-  background: #27ae60;
-  color: white;
-  padding: 4rem 0;
+  background: #57a377;
+  color: rgb(37, 17, 17);
+  padding: 3rem 0;
   text-align: center;
 }
 

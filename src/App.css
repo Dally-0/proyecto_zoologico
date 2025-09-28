@@ -1,41 +1,49 @@
-.App {
-  text-align: center;
+
+
+/* Alturas de Referencia (AJUSTA ESTOS VALORES A LO QUE MIDES EN TU NAVEGADOR) */
+:root {
+  --navbar-height: 70px;  /* Mide la altura exacta de tu Navbar */
+  --footer-height: 150px; /* Mide la altura exacta de tu Footer */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 1. Estilos para asegurar que la app ocupa toda la pantalla */
+html, body, #root, .app-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 2. Definir las alturas de los componentes */
+.navbar {
+  /* No uses position:fixed. Solo define la altura. */
+  height: var(--navbar-height); 
+  width: 100%;
+  /* Otros estilos de color, etc. */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer {
+  /* No uses position:fixed. Solo define la altura. */
+  height: var(--footer-height);
+  width: 100%;
+  /* Otros estilos de color, etc. */
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  * --------------------------------
@@ -132,4 +140,128 @@
 .form-card button {
     padding: 10px 15px;
     margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para la sección de Compras Realizadas */
+.ticket-history {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre cada tarjeta de compra */
+  padding: 1rem 0;
+}
+
+.ticket-card {
+  /* Estilo general del cuadro de la compra */
+  background: white;
+  border: 1px solid #c3cfe2; /* Borde suave */
+  border-radius: 8px;
+  padding: 15px 20px;
+  display: grid;
+  /* Distribuye los 3 elementos clave en el espacio disponible */
+  grid-template-columns: 1.5fr 3fr 1.5fr; 
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-item {
+  display: flex;
+  flex-direction: column; /* Apila el label y el valor */
+  align-items: flex-start;
+  padding: 0 10px;
+}
+
+/* Etiquetas pequeñas para describir el dato (Fecha, Tipo, Precio) */
+.ticket-item .label {
+  font-size: 0.75rem;
+  color: #7f8c8d; /* Gris sutil */
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+/* Valor principal (Fecha, Cantidad, Precio) */
+.ticket-item .value {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+}
+
+/* Ocultar el ícono en la vista de escritorio para mantener la limpieza */
+.ticket-item .icon {
+  display: none; 
+}
+
+/* Estilo específico para el precio final */
+.final-price {
+  color: #e74c3c; /* Color de botón primario (rojo/naranja) para destacar el costo */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Alineación para el precio */
+.ticket-price {
+  align-items: flex-end; /* Alinea el precio a la derecha */
+  text-align: right;
+}
+
+/* Responsive para Móviles */
+@media (max-width: 600px) {
+  .ticket-card {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 15px;
+  }
+  
+  .ticket-item {
+    flex-direction: row; /* Coloca el label y el valor en línea */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted #ecf0f1;
+    padding: 8px 0;
+  }
+  
+  .ticket-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .ticket-item .icon {
+    display: inline-block; /* Muestra el ícono en móvil para ahorrar espacio de texto */
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  
+  .ticket-item .label {
+    order: 1; /* Mueve la etiqueta al centro */
+    font-size: 0.9rem;
+  }
+
+  .ticket-item .value {
+    order: 2; /* Mueve el valor a la derecha */
+    font-size: 1rem;
+  }
+  
+  .ticket-price {
+    align-items: center;
+    justify-content: space-between;
+  }
 }

@@ -8,14 +8,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>🐾 Zoo Dally</h3>
+          <h4>🐾 Zoo Dally</h4>
           <p>Dedicados a la conservación y educación de la vida salvaje desde 1985.</p>
         </div>
 
         <div className="footer-section">
-          <h4>Contacto</h4>
-          <p>📞 +1 234 567 8900</p>
-          <p>📧 info@dally.com</p>
+          <h4>Dirección</h4>
           <p>📍 Av. Naturalia 123, Parque Central</p>
         </div>
         

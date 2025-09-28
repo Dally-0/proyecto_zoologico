@@ -34,15 +34,13 @@ function Dashboard() {
       <aside className="dashboard-sidebar">
         <h2 className="dashboard-logo">Admin Zoo</h2>
         <nav className="dashboard-nav">
-          <ul>
-            
+          <ul> 
             <li><Link to="/dashboard/contactos">Contactos</Link></li>
             <li><Link to="/dashboard/animales">Animales</Link></li>
             <li><Link to="/dashboard/faqs">FAQs</Link></li>
             <li><Link to="/dashboard/tickets">Tickets</Link></li>
             <li><Link to="/dashboard/voluntarios">Voluntarios</Link></li>
             <li><Link to="/dashboard/profiles">Perfiles</Link></li>
-            
           </ul>
         </nav>
       </aside>
