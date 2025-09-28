@@ -36,3 +36,100 @@
     transform: rotate(360deg);
   }
 }
+
+/*
+ * --------------------------------
+ * ESTILOS GENERALES Y FLEX LAYOUTS
+ * --------------------------------
+ */
+.animals-container {
+    padding: 20px;
+}
+
+.dashboard-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea en pantallas pequeñas */
+}
+
+.form-card {
+    /* Toma el 100% del ancho en móvil */
+    flex-basis: 100%; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.table-card {
+    /* Toma todo el ancho disponible */
+    flex-grow: 1; 
+    padding: 20px 0; /* padding horizontal eliminado aquí, movido a .table-wrapper */
+}
+
+/* Para tablets y escritorios */
+@media (min-width: 768px) {
+    .dashboard-grid {
+        flex-wrap: nowrap; /* Mantiene el formulario y la tabla uno al lado del otro */
+    }
+    .form-card {
+        flex-basis: 350px; /* Ancho fijo para el formulario en escritorio */
+        flex-shrink: 0;
+    }
+}
+
+/*
+ * --------------------------------
+ * ESTILOS DE TABLA RESPONSIVE
+ * --------------------------------
+ */
+
+.table-wrapper {
+    overflow-x: auto; /* Permite desplazamiento horizontal (para ancho) */
+    width: 100%;
+    padding: 0 10px;
+    
+    /* 💥 Solución para el largo (scroll vertical) */
+    max-height: 400px; /* <--- Define la altura máxima del cuadro (ajusta este valor) */
+    overflow-y: auto;  /* <--- Habilita el scroll vertical cuando el contenido es mayor que 400px */
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; 
+    /* Nota: Si quieres que los encabezados (<thead>) se mantengan visibles
+       mientras el cuerpo (<tbody>) se desplaza, se necesita CSS más avanzado 
+       (e.g., display: block en tbody y thead) o usar soluciones de librerías. */
+}
+
+.responsive-table th, 
+.responsive-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Evita que el contenido de las celdas se rompa en varias líneas */
+}
+
+.responsive-table td:nth-child(1) { /* Columna Imagen */
+    width: 60px;
+}
+
+.responsive-table td:last-child { /* Columna Acciones */
+    display: flex;
+    gap: 5px;
+}
+
+/* Estilos de inputs y botones para mejor tacto */
+.form-card input[type="text"],
+.form-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form-card button {
+    padding: 10px 15px;
+    margin-right: 10px;
+}
