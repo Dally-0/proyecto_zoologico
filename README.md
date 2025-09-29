@@ -48,9 +48,11 @@ Bash
 2. Configuración de Entorno (Supabase)
 Crea un archivo llamado .env.local en la raíz del proyecto y añade tus credenciales de Supabase:
 
-# .env.local
+
 REACT_APP_SUPABASE_URL="[Tu Project URL de Supabase]"
+
 REACT_APP_SUPABASE_ANON_KEY="[Tu clave anon de Supabase]"
+
 3. Instalación de Dependencias e Inicio
 
 
