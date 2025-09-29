@@ -1,4 +1,5 @@
 🦁 Zoo DALLY: Plataforma de Gestión y Experiencia Digital para Zoológicos
+
 Bienvenido al repositorio de Zoo DALLY, una aplicación web Full Stack diseñada para modernizar la gestión interna de un zoológico y mejorar la experiencia del usuario.
 
 Este proyecto fue desarrollado utilizando un stack tecnológico moderno y robusto, ideal para aplicaciones escalables y en tiempo real.
