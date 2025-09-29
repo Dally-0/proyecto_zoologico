@@ -1,16 +1,15 @@
-🦁 Zoo DALLY: Plataforma de Gestión y Experiencia Digital para Zoológicos
+Zoo DALLY: Plataforma de Gestión y Experiencia Digital para Zoológicos
 
 Bienvenido al repositorio de Zoo DALLY, una aplicación web Full Stack diseñada para modernizar la gestión interna de un zoológico y mejorar la experiencia del usuario.
 
 Este proyecto fue desarrollado utilizando un stack tecnológico moderno y robusto, ideal para aplicaciones escalables y en tiempo real.
 
-🚀 Stack Tecnológico
+Stack Tecnológico
 Componente	Tecnología	Propósito
 Frontend	React (JavaScript)	Interfaz de usuario dinámica y modular.
 Backend/BaaS	Supabase	Backend-as-a-Service, incluyendo: Base de datos (PostgreSQL), Autenticación y Almacenamiento de archivos (como imágenes de animales).
 
-Exportar a Hojas de cálculo
-✨ Características Principales
+Características Principales
 Zoo DALLY se divide en dos grandes módulos con funcionalidades específicas:
 
 1. Módulo de Usuario / Visitante (Frontend Público)
@@ -35,7 +34,6 @@ Atención	Revisión y respuesta a mensajes de Contactos. Análisis y cambio de e
 Comercial	Visualización del historial y detalle de Tickets comprados por los usuarios.
 Seguridad	Gestión de Perfiles de usuario y actualización de roles de acceso.
 
-Exportar a Hojas de cálculo
 ⚙️ Instalación y Configuración
 Sigue estos pasos para levantar el proyecto en tu entorno local.
 
@@ -47,8 +45,6 @@ Una cuenta y proyecto activo en Supabase.
 1. Clonar el Repositorio
 Bash
 
-git clone https://www.youtube.com/watch?v=eQMcIGVc8N0
-cd zoo-dally
 2. Configuración de Entorno (Supabase)
 Crea un archivo llamado .env.local en la raíz del proyecto y añade tus credenciales de Supabase:
 
@@ -56,8 +52,5 @@ Crea un archivo llamado .env.local en la raíz del proyecto y añade tus credenc
 REACT_APP_SUPABASE_URL="[Tu Project URL de Supabase]"
 REACT_APP_SUPABASE_ANON_KEY="[Tu clave anon de Supabase]"
 3. Instalación de Dependencias e Inicio
-Bash
 
-npm install
-npm run start
-La aplicación se ejecutará en http://localhost:3000.
+
