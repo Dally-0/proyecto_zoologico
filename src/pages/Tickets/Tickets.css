@@ -39,7 +39,7 @@
 .ticket-form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  gap: 2rem;
 }
 
 .form-group {
@@ -147,7 +147,7 @@
 .no-tickets {
   text-align: center;
   color: #888;
-  padding: 25px;
+  padding: 2rem;
   border: 2px dashed #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;
@@ -166,7 +166,11 @@
     gap: 6px;
   }
 }
-
+.ticket-history{
+  margin-bottom: 7rem;
+  padding-bottom: 7rem;
+  border-bottom: 2rem;
+}
 
 
 

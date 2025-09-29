@@ -11,7 +11,7 @@ export const Navbar = () => {
   const { user } = useAuth(); // CLAVE: user DEBE contener el rol (ej: user.role === 'admin')
   const navigate = useNavigate();
 
-  const handleClick = () => {
+const handleClick = () => {
     setOpen(!open);
   };
 
@@ -62,7 +62,7 @@ export const Navbar = () => {
     <nav className="NavbarItems">
       <h3 className="logo">
         <Link to="/"> 
-          <i className="fab fa-react"></i>Dally
+          <i className="fab fa-react"></i>DALLY
         </Link>
       </h3>
       <div className="Hamburger-Cross-Icons" onClick={handleClick}>

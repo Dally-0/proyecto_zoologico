@@ -1,49 +1,15 @@
-/* --- Estilos Generales y Sticky Footer Setup --- */
+/* --- Estilos Generales de Contenedor (Mantenidos) --- */
+/* (Se asume que site-wrapper, content-area, y header se mantienen igual) */
 
-/* Reset básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-/* O 'sticky' si solo quieres que se fije al hacer scroll */
-/* Asegura que se pegue a la izquierda */
-    /* Asegura que ocupe todo el ancho */
-    /* ... otros estilos de color, padding, etc. */
-}
-
-
-/* CLAVE: Sticky Footer Setup con Flexbox */
-html, body {
-    height: 100%;
-}
-
-.site-wrapper {
-    display: flex;
-    flex-direction: column; /* Apila el contenido verticalmente */
-    min-height: 100vh; /* Asegura que el contenedor principal ocupe toda la ventana */
-}
-
-.content-area {
-    flex-grow: 1; /* CLAVE: Esta área se expande para empujar el footer hacia abajo */
-    padding: 20px;
-}
-
-/* Estilos de ejemplo para header/main */
-header {
-    background-color: #5d6d7e;
-    color: white;
-    padding: 10px 20px;
-}
-
-/* --- Estilos del Footer (Más Pequeño) --- */
+/* --- Estilos del Footer (MÁS PEQUEÑO) --- */
 
 .footer {
-    /* Fondo y Colores */
+    /* CLAVE DE REDUCCIÓN: Padding mínimo (reducido a más de la mitad) */
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: #ecf0f1;
-    /* CLAVE: Reducimos el padding vertical para hacerlo más pequeño */
-    padding: 1.5rem 0 0.5rem; /* Menos espacio arriba y abajo */
-    margin-top: auto; /* Necesario para el sticky footer */
+    padding: 1rem 0 0.5rem; /* Muy poco espacio arriba y abajo */
+    margin-top: auto;
+    font-size: 0.9rem; /* Fuente base reducida */
 }
 
 .footer-container {
@@ -51,17 +17,17 @@ header {
     margin: 0 auto;
     padding: 0 1rem;
     display: grid;
-    /* Columnas: Mínimo 200px (reducido de 250px) para ahorrar espacio */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 1.5rem; /* Reducido de 2rem */
+    /* Reducimos el mínimo de columna y el gap */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem; /* Reducido de 1.5rem */
 }
 
 .footer-section h4 {
     color: #e74c3c;
-    margin-bottom: 0.8rem; /* Reducido */
-    font-size: 1.1rem; /* Ligeramente más pequeño */
-    border-bottom: 1px solid #e74c3c; /* Borde más fino */
-    padding-bottom: 0.3rem; /* Reducido */
+    margin-bottom: 0.5rem; /* Reducido de 0.8rem */
+    font-size: 1rem; /* Reducido de 1.1rem */
+    border-bottom: 1px solid #e74c3c;
+    padding-bottom: 0.2rem; /* Reducido de 0.3rem */
     display: inline-block;
 }
 
@@ -71,80 +37,61 @@ header {
 }
 
 .footer-section a {
+    /* Los estilos de texto están ahora en .footer */
     display: block;
     color: #bdc3c7;
     text-decoration: none;
-    margin-bottom: 0.3rem; /* Reducido */
-    font-size: 0.95rem; /* Ligeramente más pequeño */
+    margin-bottom: 0.2rem; /* Reducido de 0.3rem */
+    font-size: 0.85rem; /* Más pequeño */
     transition: all 0.3s ease;
 }
 
 .footer-section a:hover {
     color: #e74c3c;
-    transform: translateX(3px); /* Movimiento más sutil */
+    transform: translateX(2px);
 }
 
-/* Social Media Styles */
+/* Social Media Styles (reducidos) */
 .social-links {
     display: flex;
-    gap: 0.8rem;
-    margin-top: 0.5rem; /* Reducido */
+    gap: 0.5rem; /* Reducido de 0.8rem */
+    margin-top: 0.4rem; /* Reducido de 0.5rem */
 }
 
 .social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px; /* Tamaño reducido */
-    height: 30px; /* Tamaño reducido */
+    width: 28px; /* Reducido de 30px */
+    height: 28px; /* Reducido de 30px */
     background: #34495e;
     color: #ecf0f1;
     border-radius: 50%;
-    font-size: 0.8rem; /* Texto más pequeño */
+    font-size: 0.75rem; /* Más pequeño */
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
     background: #e74c3c;
-    transform: translateY(-2px); /* Movimiento más sutil */
+    transform: translateY(-1px);
 }
 
-/* Newsletter Signup */
-.newsletter-form {
-    display: flex;
-    margin-top: 0.5rem; /* Reducido */
-}
+/* Newsletter Signup - **ELIMINADO O CONSOLIDADO** para la reducción de espacio */
+/* Nota: Si necesitas el formulario, tendrás que reintroducir sus estilos con padding/margin mínimos. */
 
-.newsletter-input {
-    flex: 1;
-    padding: 0.4rem; /* Reducido */
-    border: none;
-    border-radius: 5px 0 0 5px;
-    background: #34495e;
-    color: #ecf0f1;
-}
 
-.newsletter-btn {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem; /* Reducido */
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-/* Footer Bottom */
+/* Footer Bottom (reducido) */
 .footer-bottom {
-    border-top: 1px solid #4a637d; /* Ligeramente más claro para no ser tan brusco */
-    margin-top: 1rem; /* Reducido */
-    padding-top: 0.5rem; /* Reducido */
+    border-top: 1px solid #4a637d;
+    margin-top: 0.5rem; /* Reducido de 1rem */
+    padding-top: 0.4rem; /* Reducido de 0.5rem */
     text-align: center;
 }
 
 .footer-bottom p {
     color: #95a5a6;
-    font-size: 0.8rem; /* Más pequeño */
+    font-size: 0.75rem; /* Muy pequeño */
     margin: 0;
 }
 
@@ -152,42 +99,23 @@ header {
 
 @media (max-width: 768px) {
     .footer-container {
-        grid-template-columns: 1fr; /* Una columna en móviles */
-        gap: 1rem;
+        /* Mantenemos el comportamiento de una columna, solo ajustamos el gap */
+        grid-template-columns: 1fr;
+        gap: 0.8rem; /* Reducido de 1rem */
         text-align: center;
         padding: 0 1rem;
     }
 
     .footer-section h4 {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
     }
 
-    .footer-section ul {
-        margin-bottom: 1rem;
-    }
-
+    /* Ajuste de enlaces en móvil */
     .footer-section a {
-        display: inline-block; /* Permite que los enlaces fluyan horizontalmente */
-        margin: 0 0.5rem; /* Espacio entre ellos */
+        margin: 0 0.4rem; /* Menos espacio horizontal */
     }
 
     .social-links {
         justify-content: center;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        gap: 0.5rem;
-        max-width: 300px; /* Limita el ancho del formulario */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .newsletter-input, .newsletter-btn {
-        border-radius: 5px; /* Bordes redondeados completos en columna */
-    }
-
-    .newsletter-btn {
-        width: 100%;
     }
 }

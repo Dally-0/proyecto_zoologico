@@ -158,7 +158,8 @@ html, body, #root, .app-container {
   display: flex;
   flex-direction: column;
   gap: 15px; /* Espacio entre cada tarjeta de compra */
-  padding: 1rem 0;
+  padding-bottom: 12rem;
+
 }
 
 .ticket-card {
@@ -174,6 +175,7 @@ html, body, #root, .app-container {
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s;
+  padding-bottom: 1rem;
 }
 
 .ticket-card:hover {

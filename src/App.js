@@ -12,10 +12,10 @@ import Volunteers from './pages/Volunteers/Volunteers';
 import Dashboard from './pages/Dashboard/Dashboard';
 import DashboardWelcome from './pages/Dashboard/DashboardWelcome';
 import AnimalsManagement from './pages/Dashboard/AnimalsManagement';
-import ContactosManagement from './pages/Dashboard/ContactosManagement'; // 👈 FIX: Estaba faltando
-import FaqsManagement from './pages/Dashboard/FaqsManagement';         // 👈 FIX: Estaba faltando
-import ProfilesManagement from './pages/Dashboard/ProfilesManagement';   // 👈 FIX: Estaba faltando
-import TicketsView from './pages/Dashboard/TicketsView';                 // 👈 FIX: Estaba faltando
+import ContactosManagement from './pages/Dashboard/ContactosManagement'; 
+import FaqsManagement from './pages/Dashboard/FaqsManagement';        
+import ProfilesManagement from './pages/Dashboard/ProfilesManagement';   
+import TicketsView from './pages/Dashboard/TicketsView';                 
 import VolunteersManagement from './pages/Dashboard/VolunteersManagement';
 import Animals from './pages/Animals/Animals';
 import Contact from './pages/Contact/Contact';
@@ -23,9 +23,6 @@ import Contact from './pages/Contact/Contact';
 //import FAQ from './pages/FAQ/FAQ';
 //import NotFound from './pages/NotFound/NotFound';
  
-// Componentes anidados del Dashboard (basados en tu estructura)
-
-
 
 function App() {
   return (
